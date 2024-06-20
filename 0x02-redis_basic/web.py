@@ -58,7 +58,7 @@ def get_page(url: str) -> str:
     Get the HTML content of a particular URL
     """
     response = requests.get(url)
-    # response.raise_for_status()  # Handle HTTP errors
+    response.raise_for_status()  # Handle HTTP errors
     return response.text
 
 
